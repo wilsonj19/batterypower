@@ -1,24 +1,38 @@
 page-principal {
 
   .bp-content{
-    background-image: url("../../assets/images/the-background-352165_1280.png");
-    background-size: cover;
-    button{
-      margin-top: 180px;
-    }
-  }
-  .bp-batteryLogo{
     text-align: center;
-  }
-
-  .bp-remaind{
-    margin: 0;
-    padding: 0 15px;
-    span{
-      font-size: 4rem;
+    button{
+      margin-top: 150px;
+      width: 80%;
+      height: 60px;
+    }
+    .bp-ratingCard{
+      margin-top: 30px;
+    }
+    .bp-batteryLogo{
+      text-align: center;
+    }
+  .bp-contentInfo{
+    margin-top: 30px;
+    .bp-remaind{
+      margin-top: 50px;
+      margin: 0;
+      padding: 0 10px;
+      span{
+        color: #488aff;
+        font-size: 4rem;
+      }
+      p{
+        margin: 0;
+        padding: 0;
+      }
     }
   }
-
+    .bp-appsOpen{
+      margin-top: 15px;
+    }
+  }
 
 #battery{
   position: absolute;
@@ -26,7 +40,7 @@ page-principal {
   top: 50%;
   width: 250px;
   height: 120px;
-  margin-left: -142px; // account for positive 'nib' on battery (my only change)
+  margin-left: -135px; // account for positive 'nib' on battery (my only change)
   margin-top: -110px;
   border-radius: 10px/30px;
   border-left: 2px solid rgba(255,255,255,0.2);

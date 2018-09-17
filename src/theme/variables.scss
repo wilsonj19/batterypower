@@ -14,6 +14,12 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
+//background-image app
+.bp-content{
+  background-image: url("../../assets/images/bg.jpg");
+  background-size: cover;
+}
+
 
 // Shared Variables
 // --------------------------------------------------

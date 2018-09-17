@@ -12,19 +12,26 @@ export class PrincipalPage {
 
   title:string;
   batteryInfo:any = [];
+  Optimizer:boolean = false;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
      this.title = "Battery power";
-     this.batteryInfo = BATTERYINFO.slice(0);
+     this.optimizerFun();
+  }
 
-     console.log(this.batteryInfo)
-
+  optimizerFun(){
+    if( this.Optimizer == false ){
+      this.batteryInfo = BATTERYINFO[0].ratingBad;
+    }else{
+      this.batteryInfo = BATTERYINFO[0].ratingGood;
+    }
   }
 
   optimizer(){
-    console.log(" Battery optimizada ")
+    alert(" Your Battery now is optimizer ")
+    this.Optimizer = true;
+    this.optimizerFun();
   }
 
 
