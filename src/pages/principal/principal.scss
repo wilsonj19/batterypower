@@ -2,8 +2,17 @@ page-principal {
 
   .bp-content{
     text-align: center;
+    .bp-consejos{
+      height: 80px;
+      .mensaje{
+        text-align: left;
+        p{
+          color: #9933CC;
+        }
+      }
+    }
     button{
-      margin-top: 150px;
+      margin-top: 10px;
       width: 80%;
       height: 60px;
     }
@@ -13,14 +22,13 @@ page-principal {
     .bp-batteryLogo{
       text-align: center;
     }
-  .bp-contentInfo{
-    margin-top: 30px;
     .bp-remaind{
+      margin-top: 30px;
       margin-top: 50px;
       margin: 0;
       padding: 0 10px;
-      span{
-        color: #488aff;
+      .bp-remaind-time{
+        color: #F7DD4C;
         font-size: 4rem;
       }
       p{
@@ -28,55 +36,137 @@ page-principal {
         padding: 0;
       }
     }
-  }
+    .bg-battery-brand{
+      height: 100px;
+      margin: 20px 0px;
+    }
     .bp-appsOpen{
       margin-top: 15px;
     }
   }
 
-#battery{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 250px;
-  height: 120px;
-  margin-left: -135px; // account for positive 'nib' on battery (my only change)
-  margin-top: -110px;
-  border-radius: 10px/30px;
-  border-left: 2px solid rgba(255,255,255,0.2);
-  border-right: 2px solid rgba(255,255,255,0.2);
-  background-image: linear-gradient(to right, transparent 5%, #316d08 5%, #316d08 7%, #60b939 8%, #60b939 10%, #51aa31 11%, #51aa31 60%, #64ce11 61%, #64ce11 63%, #255405 63%, black 68%, black 95%, transparent 95%), linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.4) 4%, rgba(255,255,255,0.2) 7%, rgba(255,255,255,0.2) 14%, rgba(255,255,255,0.8) 14%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.4) 86%, rgba(255,255,255,0.6) 90%, rgba(255,255,255,0.1) 92%, rgba(255,255,255,0.1) 95%, rgba(255,255,255,0.5) 98%);
-  &:before{
-    display: block;
-    position: absolute;
-    content: '';
-    width: 12px;
-    height: 55px;
-    right: -14px;
-    top: 32px;
-    border-top-right-radius: 6px 10px;
-    border-bottom-right-radius: 6px 10px;
-    background-image: -webkit-linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 14%, rgba(255,255,255,0.8) 14%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.4) 86%, rgba(255,255,255,0.6) 90%, rgba(255,255,255,0.1) 92%, rgba(255,255,255,0.1) 95%, rgba(255,255,255,0.5) 98%);
-    background-image: -moz-linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 14%, rgba(255,255,255,0.8) 14%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.4) 86%, rgba(255,255,255,0.6) 90%, rgba(255,255,255,0.1) 92%, rgba(255,255,255,0.1) 95%, rgba(255,255,255,0.5) 98%);
-    background-image: -o-linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 14%, rgba(255,255,255,0.8) 14%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.4) 86%, rgba(255,255,255,0.6) 90%, rgba(255,255,255,0.1) 92%, rgba(255,255,255,0.1) 95%, rgba(255,255,255,0.5) 98%);
-    background-image: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 14%, rgba(255,255,255,0.8) 14%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.2) 80%, rgba(255,255,255,0.4) 86%, rgba(255,255,255,0.6) 90%, rgba(255,255,255,0.1) 92%, rgba(255,255,255,0.1) 95%, rgba(255,255,255,0.5) 98%);
+  //Battery styles
+  @import url('https://fonts.googleapis.com/css?family=Lato');
 
-  }
-  &:after{
-    display: block;
-    position: absolute;
-    content: '';
-    width: 220px;
-    height: 120px;
-    left: 10px;
-    border-radius: 5px/30px;
-    border-left: 4px solid black;
-    border-right: 4px solid black;
-    background-image: -webkit-linear-gradient(rgba(255,255,255,0.3) 4%, rgba(255,255,255,0.2) 5%, transparent 5%, transparent 14%, rgba(255,255,255,0.3) 14%, rgba(255,255,255,0.12) 40%, rgba(0,0,0,0.05) 42%, rgba(0,0,0,0.05) 48%, transparent 60%, transparent 80%, rgba(255,255,255,0.3) 87%, rgba(255,255,255,0.3) 92%, transparent 92%, transparent 97%, rgba(255,255,255,0.4) 97%), -webkit-linear-gradient(right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 2%, black 2%, black 6%, transparent 6%), -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 90%);
-    background-image: -moz-linear-gradient(rgba(255,255,255,0.3) 4%, rgba(255,255,255,0.2) 5%, transparent 5%, transparent 14%, rgba(255,255,255,0.3) 14%, rgba(255,255,255,0.12) 40%, rgba(0,0,0,0.05) 42%, rgba(0,0,0,0.05) 48%, transparent 60%, transparent 80%, rgba(255,255,255,0.3) 87%, rgba(255,255,255,0.3) 92%, transparent 92%, transparent 97%, rgba(255,255,255,0.4) 97%), -moz-linear-gradient(right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 2%, black 2%, black 6%, transparent 6%), -moz-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 90%);
-    background-image: -o-linear-gradient(rgba(255,255,255,0.3) 4%, rgba(255,255,255,0.2) 5%, transparent 5%, transparent 14%, rgba(255,255,255,0.3) 14%, rgba(255,255,255,0.12) 40%, rgba(0,0,0,0.05) 42%, rgba(0,0,0,0.05) 48%, transparent 60%, transparent 80%, rgba(255,255,255,0.3) 87%, rgba(255,255,255,0.3) 92%, transparent 92%, transparent 97%, rgba(255,255,255,0.4) 97%), -o-linear-gradient(right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 2%, black 2%, black 6%, transparent 6%), -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 90%);
-    background-image: linear-gradient(rgba(255,255,255,0.3) 4%, rgba(255,255,255,0.2) 5%, transparent 5%, transparent 14%, rgba(255,255,255,0.3) 14%, rgba(255,255,255,0.12) 40%, rgba(0,0,0,0.05) 42%, rgba(0,0,0,0.05) 48%, transparent 60%, transparent 80%, rgba(255,255,255,0.3) 87%, rgba(255,255,255,0.3) 92%, transparent 92%, transparent 97%, rgba(255,255,255,0.4) 97%), linear-gradient(to left, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 2%, black 2%, black 6%, transparent 6%), linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 90%);
-  }
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.bp-battery-box{
+  background-color: #44A1A0;
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+.outer {
+  position: absolute;
+  top: 0px;
+  width: 70%;
+  height: 100%;
+  border: 7px solid #393E41;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cap {
+  width: 5px;
+  height: 80%;
+  border: 5px solid #393E41;
+  border-left: none;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 4px;
+}
+
+.inner {
+  width: 20px;
+  height: 100%;
+  background-color: #F7DD4C;
+}
+
+.face {
+  margin: 25px 30px;
+  position: absolute;
+}
+
+.eye {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #393E41;
+}
+
+.eye.left {
+  transform: translateX(50px);
+  top: 5px;
+}
+
+.eye.right {
+  transform: translateX(100px);
+  top: 5px;
+}
+
+.mouth.happy {
+  width: 50px; height: 10px;
+  border-radius: 50%;
+  background-color: none;
+  position: absolute;
+  top: 18px; left: 55px;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 0 #393E41;
+  visibility: hidden;
+}
+
+.mouth.sad {
+  width: 50px; height: 10px;
+  border-radius: 50%;
+  background-color: none;
+  position: absolute;
+  top: 28px; left: 55px;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 0 #393E41;
+  transform: rotate(180deg);
+}
+
+.charge, .drain{
+  width: 100px;
+  background-color: #F7DD4C;
+  color: #393E41;
+  padding: 5px;
+  display: block;
+  text-align: center;
+}
+
+.charged {
+  margin: 0 auto;
+  position: absolute;
+  margin-right: 20px;
+  left: 630px; top: 40px;
+  width: 200px;
+}
+
+.full {
+  position: absolute;
+  top: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: #393E41;
+  visibility: hidden;
+}
+
+.buttons {
+  margin: 0 auto;
+  width: 300px;
+  margin-top: -25px;
+}
+
+.buttons > div {
+  padding-right: 5px;
+  display: inline-block;
+}
+
 
 }

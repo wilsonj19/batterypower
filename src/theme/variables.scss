@@ -6,6 +6,12 @@
 $font-path: "../assets/fonts";
 
 
+//GetBoostrap
+
+
+
+
+
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
@@ -16,8 +22,13 @@ $app-direction: ltr;
 
 //background-image app
 .bp-content{
+  //  background-image: linear-gradient(to right top, #9933cc, #9e42cc, #a24fcc, #a65bcc, #aa66cc);
   background-image: url("../../assets/images/bg.jpg");
   background-size: cover;
+}
+
+.header{
+
 }
 
 
@@ -40,6 +51,9 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
+  themePrimary: #9933CC,
+  themeSecondary: #aa66cc,
+  bgPrimary: #263238,
   primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,

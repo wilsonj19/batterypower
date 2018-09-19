@@ -1,10 +1,5 @@
-<!--
-  Generated template for the PrincipalPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<ion-header class="header" color="primary">
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only color="royal">
@@ -23,52 +18,89 @@
 
 <ion-content padding class="bp-content animated fadeIn delay-0.8s">
 
-   <div class="bp-batteryLogo">
-    <div id="hint" class="animated fadeInUp delay-2s">Consejos: Usar el celular conectado acorta la vida util de tu bateria.</div>
-    <div id="battery" class="animated bounce delay-1.8s"></div>
-   </div>
+  <ion-grid>
+    <ion-row>
 
-   <div class="bp-contentInfo animated fadeInLeft delay-2s">
-     <div class="bp-remaind">
-       <p>Time left</p>
-       <span color="primary">{{ batteryInfo[5].status }}</span>
-     </div>
-   </div>
+        <ion-col col-12 class="bp-consejos animated fadeInDown delay-3s">
 
-   <button ion-button
-           round
-           color="primary"
-           (click)="optimizer()"
-           class="animated fadeInUp delay-2s"
-   > Optimizer </button>
+          <ion-grid>
+            <ion-row>
+                <ion-col col-4 class="texto">
+                  <p>Consejos:</p>
+                </ion-col>
+                <ion-col col-8 class="mensaje">
+                  <p id='changing'></p>
+                </ion-col>
+            </ion-row>
+          </ion-grid>
 
-   <ion-card class="animated fadeIn delay-1s bp-ratingCard">
+        </ion-col>
 
-     <ion-card-header>
-       <h2><strong>Battery Status Rating System</strong></h2>
-     </ion-card-header>
+        <ion-col col-12 class="bp-remaind animated fadeInLeft delay-2s ">
+            <div>
+              <p>Time left</p>
+              <span class="bp-remaind-time">{{ batteryInfo[5].status }}</span>
+            </div>
+        </ion-col>
 
-     <ion-card-content>
+        <ion-col col-12 class="bg-battery-brand animated fadeIn delay-1s">
+           <div class="bp-battery-container">
 
-        <ion-grid>
-        <ion-row>
+             <div class="bp-battery-box">
+                <div class="cap"></div>
+                  <div class="outer">
+                  <div class="inner">
+                     <div class="face">
+                     <div class="eye left"> </div>
+                     <div class="eye right"> </div>
+                     <div class="mouth happy"> </div>
+                     <div class="mouth sad"> </div>
+                 </div>
+                 </div>
+               </div>
+            </div>
+
+            <!-- Buttons
+            <div class="charged"><label class="full">fully charged </label>
+               </div>
+               <div class="buttons">
+                 <div><label class="charge">CHARGE</label></div>
+               <div><label class="drain">DRAIN</label>    </div>
+            </div> -->
+
+           </div>
+        </ion-col>
 
         <ion-col col-12>
-           <ion-list>
-               <ion-item *ngFor="let rating of batteryInfo">
-                 <ion-avatar item-start>
-                   <ion-icon [name]="rating.icon"></ion-icon>
-                 </ion-avatar>
-                 <h2>{{ rating.name }}</h2>
-                 <p>{{ rating.status }}</p>
-              </ion-item>
-           </ion-list>
-         </ion-col>
+          <button ion-button
+                  round
+                  color="themeSecondary"
+                  (click)="optimizer()"
+                  class="animated fadeInUp delay-2s"
+          > Optimizer </button>
+        </ion-col>
 
-        </ion-row>
-       </ion-grid>
-     </ion-card-content>
+        <ion-col col-12>
+          <ion-card class="animated fadeInUp delay-3s bp-ratingCard">
+            <ion-card-header>
+              <h2><strong>Battery Status Rating System</strong></h2>
+            </ion-card-header>
+            <ion-card-content>
+                  <ion-list>
+                      <ion-item *ngFor="let rating of batteryInfo">
+                        <ion-avatar item-start>
+                          <ion-icon [name]="rating.icon"></ion-icon>
+                        </ion-avatar>
+                        <h2>{{ rating.name }}</h2>
+                        <p>{{ rating.status }}</p>
+                     </ion-item>
+                  </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
 
-   </ion-card>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>

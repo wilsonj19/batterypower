@@ -1,0 +1,39 @@
+<div class="bp-batteryLogo">
+ <div id="hint" class="animated fadeInUp delay-2s">Consejos: Usar el celular conectado acorta la vida util de tu bateria.</div>
+</div>
+
+<div class="container absolute">
+  <div id="inner" class="inner absolute text">||||||||||||||||||||||||||||||</div>
+  <div id="battery" class="battery absolute text">||||||||||||||||||||||||||||||</div>
+</div>
+
+<div class="bp-contentInfo animated fadeInLeft delay-2s">
+  <div class="bp-remaind">
+    <p>Time left</p>
+    <span color="primary">{{ batteryInfo[5].status }}</span>
+  </div>
+</div>
+
+<button ion-button
+        round
+        color="primary"
+        (click)="optimizer()"
+        class="animated fadeInUp delay-2s"
+> Optimizer </button>
+
+<ion-card class="animated fadeIn delay-1s bp-ratingCard">
+  <ion-card-header>
+    <h2><strong>Battery Status Rating System</strong></h2>
+  </ion-card-header>
+  <ion-card-content>
+        <ion-list>
+            <ion-item *ngFor="let rating of batteryInfo">
+              <ion-avatar item-start>
+                <ion-icon [name]="rating.icon"></ion-icon>
+              </ion-avatar>
+              <h2>{{ rating.name }}</h2>
+              <p>{{ rating.status }}</p>
+           </ion-item>
+        </ion-list>
+  </ion-card-content>
+</ion-card>
