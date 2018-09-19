@@ -1,5 +1,12 @@
 page-principal {
 
+  .toolbar-background-md {
+    border-color: #b2b2b2;
+    background: #9933CC !important;
+  }
+  .toolbar-title-md {
+    color: #fff !important;
+  }
   .bp-content{
     text-align: center;
     .bp-consejos{
@@ -28,7 +35,7 @@ page-principal {
       margin: 0;
       padding: 0 10px;
       .bp-remaind-time{
-        color: #F7DD4C;
+        color: #fff;
         font-size: 4rem;
       }
       p{
@@ -81,14 +88,28 @@ page-principal {
 }
 
 .inner {
-  width: 20px;
+  width: 0px;
   height: 100%;
-  background-color: #F7DD4C;
+  background-color: #71FB85;
 }
 
+ .bp-face-face{
+   visibility: hidden;
+ }
+
+ .bp-face-conectando{
+   visibility: hidden;
+ }
+
+ #conectando{
+   width: 100%;
+   text-align: center;
+ }
+
 .face {
-  margin: 25px 30px;
+  margin: 25px 25px;
   position: absolute;
+  width: 80%;
 }
 
 .eye {

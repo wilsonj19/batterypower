@@ -22,6 +22,13 @@ export class PrincipalPage {
 
      $(window).ready( ()=> {
 
+         //Loading battery brand animation
+         setTimeout( () => {
+           $('#conectando').addClass('bp-face-conectando');
+           $('.inner').css('width','20');
+           $(".bp-face-face").css('visibility', 'visible');
+         }, 6000 );
+
          //Sequential Text Animation Plugin For jQuery - autochange_text.js
          var counter = 0;
          const elem = document.getElementById("changing");
