@@ -1,5 +1,21 @@
 page-principal {
 
+  //DRBS HEADER
+  .drbs-header{
+    .drbs-toolbar{
+      display: flex !important;
+      align-items: center !important;
+      .drbs-toolbar-title{
+        .drbs-toolbar-title-brand{
+          width: 60%;
+          height: 60%;
+        }
+      }
+    }
+  }
+  // END DRBS HEADER
+
+
   .bp-content{
     text-align: center;
     button{

@@ -10,6 +10,7 @@ import { TabsPage } from "../pages/tabs/tabs";
 import { FastchargePage }  from "../pages/fastcharge/fastcharge";
 import { AboutPage } from "../pages/about/about";
 import { BoostPage } from "../pages/boost/boost";
+import { FrontPage } from "../pages/front/front";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BoostPage } from "../pages/boost/boost";
     TabsPage,
     FastchargePage,
     BoostPage,
-    AboutPage
+    AboutPage,
+    FrontPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { BoostPage } from "../pages/boost/boost";
     TabsPage,
     FastchargePage,
     BoostPage,
-    AboutPage
+    AboutPage,
+    FrontPage
   ],
   providers: [
     StatusBar,

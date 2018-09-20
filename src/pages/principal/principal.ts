@@ -13,11 +13,17 @@ export class PrincipalPage {
   title:string;
   batteryInfo:any = [];
   Optimizer:boolean = false;
+  brand:string;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
      this.title = "Battery power";
      this.optimizerFun();
+     console.log(BATTERYINFO);
+
+     this.brand = BATTERYINFO[1].assets.images.brand;
+
+
   }
 
   optimizerFun(){

@@ -18,5 +18,13 @@ export const BATTERYINFO = [
       { name: "Connected", status: "True", icon: "ios-power-outline" },
       { name: "Discharging", status: "08"+"h"+" "+"50"+"m", icon: "ios-timer-outline" }
     ]
+  },
+  {
+    assets: {
+        images: {
+            loading: 'assets/images/drbs-front.jpg',
+            brand: 'assets/images/drbs-brand.jpg'
+        }
+    }
   }
 ]
